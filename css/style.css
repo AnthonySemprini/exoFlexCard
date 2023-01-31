@@ -1,10 +1,20 @@
-* {
-    background-color: rgba(68,117,136,0.548);
+#container {
+    display: flex;
+    justify-content: center;
+    
 }
-#container {display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+
+* {
+    background-color: rgba(68,117,136,1);
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+       display: flex;
+       flex-direction: row;
+        justify-content:center;
+        
+        
 
 }
 img {
@@ -15,6 +25,7 @@ img {
 
 p{
     background-color: white;
+    font-size: 14px;
     margin: 30px;
 
 }
@@ -29,14 +40,48 @@ h2 {
     width: 300px;
     background-color: white;
     border-radius: 10px;
+    margin: 10px;
 }
 .box2 {
     width: 300px;
     background-color: white;
     border-radius: 10px;
+    margin: 10px;
 }
 .box3 {
     width: 300px;
     background-color: white;
     border-radius: 10px;
+    margin: 10px;
+}
+
+
+#image1 {
+   filter:  grayscale(100%);
+   transition-duration: 1s;
+}
+#image1:hover {
+    filter: none;
+    transition-duration: 1s;
+    transform: scale(1.1);
+}
+
+#image2 {
+    filter:  grayscale(100%);
+    transition-duration: 1s;
+}
+#image2:hover {
+    filter: none;
+    transition-duration: 1s;
+    transform: scale(1.1);
+}
+
+#image3 {
+    filter:  grayscale(100%);
+    transition-duration: 1s;
+  }
+  #image3:hover {
+    filter: none;
+    transition-duration: 1s;
+    transform: scale(1.1);
 }
