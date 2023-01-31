@@ -1,15 +1,11 @@
 #container {
     display: flex;
-    justify-content: center;   
+    justify-content: center;
     background-color: rgba(68,117,136,1);
     padding-bottom: 100%;
-    padding-top: 100px;
-    
-}
-* {
     font-family: 'Poppins', sans-serif;
+    padding-top: 100px;   
 }
-
 main {
        display: flex;
        flex-direction: row;
@@ -37,6 +33,7 @@ h2 {
     width: 300px;
     background-color: white;
     border-radius: 10px;
+    box-shadow: rgba(2, 0, 0, 0.65) 0px 10px 20px;
     margin: 10px;
     transition-duration: 1;
 }
@@ -72,11 +69,14 @@ h2 {
     transform: scale(1.1);
 }
 .coeur {
-    display: flex;
+    color: white;
+}
+
+.coeur:hover {
+    display: flex;    
     justify-content: center;
     align-items: center;
-    color: white;
-    font-size: 25px;
+     font-size: 25px;
     width: 55px;
     height: 45px;
     background-color: rgb(255, 0, 111);
