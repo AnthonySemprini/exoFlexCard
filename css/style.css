@@ -1,20 +1,20 @@
 #container {
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: rgba(68,117,136,1);
-    padding-bottom: 100%;
     font-family: 'Poppins', sans-serif;
-    padding-top: 100px;   
+    min-height: 100vh;
 }
 main {
-       display: flex;
-       flex-direction: row;
-        justify-content:center;
+    display: flex;
+    flex-wrap: wrap;
 }
-img {
-    height: 200px;
-    width: 300px;
-    border-radius: 10px 10px 0  0;
+
+img:hover{
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
 }
 
 p{
@@ -30,57 +30,45 @@ h2 {
     text-align: center;
 }
 .box {
+    position: relative; /* parent */
     width: 300px;
     background-color: white;
     border-radius: 10px;
     box-shadow: rgba(2, 0, 0, 0.65) 0px 10px 20px;
     margin: 10px;
     transition-duration: 1;
-}
-.box:hover {
-    transform:translateY(10px);
-    transition-duration: 1;
-}
-#image1 {
-   filter:  grayscale(100%);
-   transition-duration: 1s;
-}
-#image1:hover {
-    filter: none;
-    transition-duration: 1s;
-    transform: scale(1.1);
-}
-#image2 {
-    filter:  grayscale(100%);
-    transition-duration: 1s;
-}
-#image2:hover {
-    filter: none;
-    transition-duration: 1s;
-    transform: scale(1.1);
-}
-#image3 {
-    filter:  grayscale(100%);
-    transition-duration: 1s;
-  }
-  #image3:hover {
-    filter: none;
-    transition-duration: 1s;
-    transform: scale(1.1);
-}
-.coeur {
-    color: white;
+    overflow: hidden;
 }
 
-.coeur:hover {
-    display: flex;    
+.zoom-image {
+    overflow: hidden;  /*cacher les contour de la class .zoom-image */
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+}
+
+.zoom-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+.coeur{
+    display: flex;
     justify-content: center;
     align-items: center;
-     font-size: 25px;
-    width: 55px;
-    height: 45px;
-    background-color: rgb(255, 0, 111);
-    border-radius: 5px;
-    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(245, 21, 58);
+    color: white;
+    position: absolute; /*enfant*/
+    left: -40px;
     top: 0;
+    transition: 0.5s;
+    
+   
+}
+.box:hover .coeur{    /*hover active en survolant avec le curseur souris*/
+    position: absolute; /*enfant*/
+    left: 0;
+  
 }
